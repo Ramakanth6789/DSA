@@ -17,6 +17,11 @@ public class SinglyLinkedlist {
         return head;
     }
 
+    public void insertInLinkedinList(int nodeValue, int location){
+
+    }
+
+
 
 
     
