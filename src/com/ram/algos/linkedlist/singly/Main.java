@@ -1,4 +1,4 @@
-package com.ram.algos.linkedinlist;
+package com.ram.algos.linkedlist.singly;
 
 
 public class Main {
@@ -16,6 +16,9 @@ public class Main {
         singlyLinkedlist.traversalLinkedinList();
         System.out.println("------");
         System.out.println(singlyLinkedlist.searchValue(99));
+        System.out.println("-------------------");
+        singlyLinkedlist.deleteNode(3);
+        singlyLinkedlist.traversalLinkedinList();
 
 
     }
