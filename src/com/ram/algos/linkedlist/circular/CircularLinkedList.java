@@ -32,7 +32,7 @@ public class CircularLinkedList {
         } else {
             Node tempNode = head;
             int index = 0;
-            while (index < location-1) {
+            while (index < location - 1) {
                 tempNode = tempNode.next;
                 index++;
             }
@@ -44,15 +44,66 @@ public class CircularLinkedList {
     }
 
     public void traverseLinkedList() {
+        if (head != null) {
+            Node node = head;
+            for (int i = 0; i < size; i++) {
+                System.out.print(node.value);
+                if (i != size - 1) {
+                    System.out.print(" -> ");
+                }
+                node = node.next;
+            }
+            System.out.println();
+        }
+    }
+
+    public boolean searchNode(int nodeValue) {
+        if (head == null) {
+            System.out.println("Linked list is empty");
+            return false;
+        }
         Node node = head;
         for (int i = 0; i < size; i++) {
-            System.out.print(node.value);
-            if (i != size - 1) {
-                System.out.print(" -> ");
+            if (node.value == nodeValue) {
+                System.out.println("value found at position: " + i);
+                return true;
             }
             node = node.next;
         }
-        System.out.println();
+        System.out.println("value not found in linked list");
+        return false;
     }
+
+    public void deleteNodeLinkedinList(int location) {
+        if (head == null) {
+            System.out.println("linked list does not exist");
+            return;
+        } else if (location == 0) {
+            head = head.next;
+            tail.next = head;
+            size--;
+            if (size == 0) {
+                tail = null;
+                head.next = null;
+                head = null;
+            }
+        } else if (location >= size) {
+            Node node = head;
+            for (int i = 0; i < size - 1; i++) {
+                node = node.next;
+            }
+
+            node.next = tail.next;
+            tail = node;
+        } else {
+            Node node = head;
+            for (int i = 0; i < location; i++) {
+                node = node.next;
+            }
+            node.next = node.next.next;
+            size--;
+        }
+    }
+
 
 }
