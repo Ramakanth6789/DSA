@@ -44,17 +44,21 @@ public class CircularLinkedList {
     }
 
     public void traverseLinkedList() {
-        if (head != null) {
-            Node node = head;
-            for (int i = 0; i < size; i++) {
-                System.out.print(node.value);
-                if (i != size - 1) {
-                    System.out.print(" -> ");
-                }
-                node = node.next;
-            }
-            System.out.println();
+        if (head == null) {
+            System.out.println("linked list does not exist");
+            return;
         }
+
+        Node node = head;
+        for (int i = 0; i < size; i++) {
+            System.out.print(node.value);
+            if (i != size - 1) {
+                System.out.print(" -> ");
+            }
+            node = node.next;
+        }
+        System.out.println();
+
     }
 
     public boolean searchNode(int nodeValue) {
@@ -103,6 +107,13 @@ public class CircularLinkedList {
             node.next = node.next.next;
             size--;
         }
+    }
+
+    public void deleteLinkedList() {
+        head = null;
+        tail = null;
+        System.out.println("Linked list deleted.");
+
     }
 
 
