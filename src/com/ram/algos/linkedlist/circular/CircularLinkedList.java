@@ -112,7 +112,7 @@ public class CircularLinkedList {
     public void deleteLinkedList() {
         head = null;
         tail = null;
-        System.out.println("Linked list deleted");
+        System.out.println("Linked list deleted.");
 
     }
 
