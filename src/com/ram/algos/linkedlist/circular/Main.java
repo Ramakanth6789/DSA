@@ -15,5 +15,7 @@ public class Main {
         circularLinkedList.searchNode(6);
         circularLinkedList.deleteNodeLinkedinList(3);
         circularLinkedList.traverseLinkedList();
+        circularLinkedList.deleteLinkedList();
+        circularLinkedList.traverseLinkedList();
     }
 }
