@@ -12,5 +12,8 @@ public class Main {
         System.out.println("------");
 
         circularLinkedList.traverseLinkedList();
+        circularLinkedList.searchNode(6);
+        circularLinkedList.deleteNodeLinkedinList(3);
+        circularLinkedList.traverseLinkedList();
     }
 }
