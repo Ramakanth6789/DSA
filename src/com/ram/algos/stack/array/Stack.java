@@ -1,4 +1,4 @@
-package com.ram.algos.stack;
+package com.ram.algos.stack.array;
 
 public class Stack {
     private int[] arr;
