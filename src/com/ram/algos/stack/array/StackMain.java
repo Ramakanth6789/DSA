@@ -1,4 +1,4 @@
-package com.ram.algos.stack;
+package com.ram.algos.stack.array;
 
 public class StackMain {
     public static void main(String[] args) {
